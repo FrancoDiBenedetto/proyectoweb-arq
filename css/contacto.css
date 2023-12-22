@@ -72,12 +72,13 @@
 }
 
 .anuncio__cartel {
-    margin-left: 2rem;
+    margin-left: .5rem;
     margin-right: 2rem;
-    font-size: 1rem;
+    font-size: .7rem;
     background-color: antiquewhite;
     padding: 1rem;
-    min-width: 40%;
+    width: 30%;
+    min-width: 30%;
     min-height: 50%;
     box-shadow: inset;
     border-radius: .5rem;

@@ -183,22 +183,53 @@ header nav ul {
 }
 
 .section1 h2 {
-    background-color: grey;
-    width: 120px;
-    color: rgb(8, 17, 8);
-    text-align: center;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 120px;
-    margin-left: 10px;
-    font-size: 15px;
-    box-sizing: border-box;
-    display: flex;
+    margin-left: .5rem;
+    margin-right: 2rem;
+    font-size: 1rem;
+    background-color: antiquewhite;
+    padding: 1.2rem;
+    width: 37%;
+    min-width: 30%;
+    min-height: 20%;
+    box-shadow: inset;
+    border-radius: .5rem;
+    position: relative;
+    top: 90px;
+}
+
+.section1__carteles {
+    position: relative;
+    width: 100%;
 }
 
 .section1__h4 {
     color: aliceblue;
+    font-size: 1rem;
     margin-left: 5px;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    margin-right: .5rem;
+
+}
+
+@media (min-width: 768px) {
+
+    .section1 h2 {
+        background-color: rgb(159, 226, 179);
+        margin-left: 2rem;
+        max-width: 60%;
+        min-width: 40%;
+        min-height: 20%;
+        box-shadow: inset;
+        border-radius: .5rem;
+        color: rgb(8, 17, 8);
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.5rem;
+        position: relative;
+        top: 90px;
+    }
 }
 
 /* ----------- Body seccion 2 Portfolio ------------------------------ */
@@ -297,6 +328,7 @@ header nav ul {
 
 .sectionvideo {
     background-color: rgb(38, 52, 83);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -313,9 +345,9 @@ header nav ul {
 .sectionvideo h4 {
     background-color: rgb(134, 134, 135);
     color: rgb(10, 3, 3);
-    font-size: 1rem;
+    font-size: 1.4rem;
     padding: 10px;
-    width: 250px;
+    width: 60%;
     text-align: center;
     margin-top: 20px;
     padding: .5rem;
@@ -323,13 +355,13 @@ header nav ul {
 }
 
 .sectionvideo p {
-    color: aliceblue;
-    font-size: 1rem;
-    padding: 10px;
-    width: 300px;
-    height: 220px;
+    color: rgb(22, 20, 20);
+    font-size: .9rem;
+    padding: .5px;
     margin-top: 20px;
     text-align: center;
+    max-height: 300px;
+    margin-bottom: 1rem;
 }
 
 
@@ -338,21 +370,54 @@ header nav ul {
     .sectionvideo {
         background-color: rgb(72, 89, 125);
         height: 600px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-content: center;
+        justify-content: center;
+    }
+
+    .video {
+        display: grid;
+        justify-content: center;
+        margin-left: 2rem;
+        height: 70%;
+        width: 50%;
+        max-height: 700px;
     }
 
     .sectionvideo__texto {
-
-        display: flex;
-        justify-content: start;
+        justify-content: center;
     }
+
+    .sectionvideo h4 {
+        background-color: rgb(134, 134, 135);
+        color: rgb(10, 3, 3);
+        font-size: 2rem;
+        padding: 10px;
+        width: 60%;
+        text-align: center;
+        margin-top: 20px;
+        padding: .5rem;
+        border-radius: 10px;
+    }
+
+    .sectionvideo p {
+        font-size: 1.2rem;
+        padding: .5px;
+        margin-top: 20px;
+        text-align: center;
+        max-height: 300px;
+        margin-bottom: 1rem;
+    }
+
 
     .sectionvideo__video {
         max-width: 600px;
         max-height: 700px;
     }
+
+
+
 }
 
 
@@ -378,7 +443,7 @@ footer {
 
 footer {
     background-image: url(../img/image-asset.jpg.jpg);
-    height: 170vh;
+    height: 190vh;
     display: flex;
     background-position: center;
     background-size: cover;
@@ -386,7 +451,11 @@ footer {
     object-fit: cover;
 }
 
-.h3navegacion {
+.navfooter {
+    margin-top: 2rem;
+}
+
+.navfooter__titulo {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -395,13 +464,12 @@ footer {
     font-size: 15px;
     padding: 10px;
     overflow: hidden;
-    margin-top: 2rem;
     text-align: center;
     padding: .5rem;
     border-radius: 20px;
 }
 
-.navegacion-footer {
+.navfooter__ul {
     background-color: rgb(39, 59, 104);
     padding: 15px;
     color: black;
@@ -409,7 +477,7 @@ footer {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    margin-top: 15px;
+    margin-top: .5rem;
     gap: 10px;
     padding: .5rem;
     border-radius: 20px;
@@ -437,7 +505,7 @@ footer {
 }
 
 .contactenos {
-
+    max-width: 500px;
     margin-right: 1rem;
     margin-left: 1rem;
     display: flex;
@@ -491,38 +559,33 @@ footer {
         gap: 20px;
     }
 
-    .navegacion-footer {
+    .navfooter {
+        font-size: 1.3rem;
+        padding: 4rem;
+        max-width: 1000px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navfooter__titulo {
+        height: 3rem;
+        font-size: 1.4rem;
+    }
+
+    .navfooter__ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
 
-    .nav-footer {
-        margin-left: 2rem;
-        max-width: 500px;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-    }
-
-    .h3navegacion {
-        height: 3rem;
-    }
-
 
     .contactenos {
-        max-width: 500px;
-        margin-right: 2rem;
-
-        display: flex;
-        flex-direction: column;
         justify-content: center;
+        justify-items: center;
         align-items: center;
-        gap: .5rem;
         background-color: rgb(39, 59, 104);
-        padding: .5rem;
         border-radius: 20px;
-        margin-top: 30px;
         gap: 1rem;
         color: white;
     }
@@ -538,13 +601,9 @@ footer {
     }
 
     .seguinos {
-        max-width: 500px;
+        max-width: 600px;
         margin-right: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        grid-row: 2/ 3;
-        grid-column: 2 / 3;
     }
+
 
 }
